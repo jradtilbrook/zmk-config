@@ -26,6 +26,17 @@
         };
     };
 
+    behaviors {
+        sticky_layer_tap: sticky_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_LAYER_TAP";
+            bindings = <&sl>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,7 +50,7 @@
             bindings = <
 &kp TAB                        &kp Q       &kp W       &kp E         &kp R        &kp T      &kp Y      &kp U        &kp I         &kp O       &kp P          &kp BSPC
 &mt LG(LC(LA(LSHIFT))) ESCAPE  &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &lt 2 G    &lt 2 H    &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SQT
-&kp LSHFT                      &kp Z       &kp X       &kp C         &kp V        &kp B      &kp N      &kp M        &kp COMMA     &kp DOT     &kp FSLH       &kp RET
+&sl 2                          &kp Z       &kp X       &kp C         &kp V        &kp B      &kp N      &kp M        &kp COMMA     &kp DOT     &kp FSLH       &kp RET
                                                        &kp LCMD      &mo 1        &kp RET    &kp SPACE  &mo 2        &kp RALT
             >;
         };
@@ -67,10 +78,19 @@
             //                    |    | SHFT | GUI |   | GUI | SHFT |    |
 
             bindings = <
-&trans     &none        &none   &none   &none   &none     &none   &none   &none   &none   &none   &trans
-&kp GRAVE  &mt LGUI N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSLH
-&none      &none        &none   &none   &none   &none     &none   &none   &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans    &trans  &trans  &trans
+&trans     &none        &none   &none          &none   &none     &none   &none   &none               &none   &none        &trans
+&kp GRAVE  &mt LGUI N1  &kp N2  &mt LSHIFT N3  &kp N4  &kp N5    &kp N6  &kp N7  &mt RIGHT_SHIFT N8  &kp N9  &mt RGUI N0  &kp BSLH
+&none      &none        &none   &none          &none   &none     &none   &none   &trans              &trans  &trans       &trans
+                                &trans         &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&none   &none   &none   &none   &none   &none    &none     &none     &none   &none      &none  &none
+&trans  &trans  &trans  &trans  &trans  &none    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none   &none   &none   &none   &none   &none    &none     &none     &none   &none      &none  &none
+                        &none   &none   &none    &none     &none     &none
             >;
         };
     };
