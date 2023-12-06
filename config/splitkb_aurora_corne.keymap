@@ -64,10 +64,10 @@
             //                    | CMD | LWR | ??? |   | SPC | RSE | ALT |
 
             bindings = <
-&kp TAB                        &kp Q       &kp W       &kp E         &kp R        &kp T      &kp Y      &kp U              &kp I         &kp O       &kp P          &kp BSPC
-&mt LG(LC(LA(LSHIFT))) ESCAPE  &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &lt 2 G    &lt 2 H    &mt RCTRL J        &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SQT
-&sl 2                          &kp Z       &kp X       &kp C         &kp V        &kp B      &kp N      &kp M              &kp COMMA     &kp DOT     &kp FSLH       &kp RET
-                                                       &kp LCMD      &mo 1        &kp RET    &kp SPACE  &layer2_caps_word  &kp RALT
+&kp TAB  &kp Q       &kp W       &kp E         &kp R        &kp T          &kp Y      &kp U              &kp I         &kp O       &kp P          &kp BSPC
+&kp ESC  &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &lt 2 G        &lt 2 H    &mt RCTRL J        &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SQT
+&sl 2    &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N      &kp M              &kp COMMA     &kp DOT     &kp FSLH       &kp RET
+                                 &kp LCMD      &mo 1        &mt F20 RET    &kp SPACE  &layer2_caps_word  &kp RALT
             >;
         };
 
