@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER2_CAPS_WORD";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&caps_word>;
+            bindings = <&mo 2>, <&caps_word>;
         };
     };
 
