@@ -56,7 +56,7 @@
             bindings = <&mo 2>, <&caps_word>;
         };
 
-        hrm_l: homerow_mods {
+        hrm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -66,6 +66,19 @@
             quick-tap-ms = <HRM_QUICK_TAP>;
             require-prior-idle-ms = <HRM_PRIOR_IDLE>;
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            hold-trigger-on-release;
+        };
+
+        hrm_r: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HRM_TAPPING_TERM>;
+            quick-tap-ms = <HRM_QUICK_TAP>;
+            require-prior-idle-ms = <HRM_PRIOR_IDLE>;
+            hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
         };
     };
@@ -91,7 +104,7 @@
 
             bindings = <
 &kp TAB  &kp Q                  &kp W            &kp E              &kp R                &kp T            &kp Y      &kp U              &kp I            &kp O       &kp P          &kp BSPC
-&kp ESC  &hrm_l LEFT_GUI A        &hrm_l LEFT_ALT S  &hrm_l LEFT_SHIFT D  &hrm_l LEFT_CONTROL F  &lt 1 G          &lt 1 H    &mt RCTRL J        &mt RSHIFT K     &mt RALT L  &mt RGUI SEMI  &kp SQT
+&kp ESC  &hrm_l LEFT_GUI A        &hrm_l LEFT_ALT S  &hrm_l LEFT_SHIFT D  &hrm_l LEFT_CONTROL F  &lt 1 G          &lt 1 H    &hrm_r RCTRL J        &hrm_r RSHIFT K     &hrm_r RALT L  &hrm_r RGUI SEMI  &kp SQT
 &sl 1    &sticky_layer_tap 4 Z  &kp X            &kp C              &kp V                &kp B            &kp N      &kp M              &kp COMMA        &kp DOT     &kp FSLH       &kp RET
                                                  &kp LCMD           &mo 1                &mt F20 ENTER    &kp SPACE  &layer2_caps_word  &lt 3 BACKSPACE
             >;
