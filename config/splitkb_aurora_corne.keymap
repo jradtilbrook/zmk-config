@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  * Ref:
  * - https://precondition.github.io/home-row-mods#home-row-mods-order
+ * - https://www.reddit.com/r/ErgoMechKeyboards/comments/11gejh3/lpt_try_urobs_zmk_timeless_homerow_mods_combos/
  */
 
 #include <behaviors.dtsi>
