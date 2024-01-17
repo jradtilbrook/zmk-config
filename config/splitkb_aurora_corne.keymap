@@ -15,8 +15,8 @@
 // layers
 #define DEFAULT 0
 #define SYM_NUM 1
-#define NAV 1
-#define VIM 3
+#define NAV 2
+#define MEDIA 3
 
 // home-row mod timing config
 #define HRM_TAPPING_TERM 300
@@ -113,6 +113,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&kp SPACE>, <&dot_spc>;
         };
+
+        // tap: backspace | shift-tap: del | hold: media layer
+        bspc_del_layer: bspc_del_layer {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt MEDIA BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -128,7 +136,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <5>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+            bindings = <&kp KP_DOT &kp SPACE &sk LSHFT>;
         };
     };
 
@@ -145,7 +153,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
             &sl 1              &sticky_layer_tap 4 Z           &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                  &kp RET
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
-                                                                                       &kp LGUI                  &mo 1                 &mt F20 ENTER               &lt_spc NAV 0          &layer2_caps_word         &lt 3 BACKSPACE
+                                                                                       &kp LGUI                  &mo 1                 &mt F20 ENTER                 &lt_spc NAV 0           &bspc_del_layer         &lt 3 BACKSPACE
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
             >;
         };
