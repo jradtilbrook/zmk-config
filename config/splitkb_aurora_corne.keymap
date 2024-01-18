@@ -97,25 +97,6 @@
             hold-trigger-on-release;
         };
 
-        // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
-        lt_spc: layer_toggle_space {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mo>, <&spc_morph>;
-
-            flavor = "balanced";
-            tapping-term-ms = <HRM_TAPPING_TERM_FAST>;
-            quick-tap-ms = <HRM_QUICK_TAP>;
-        };
-
-        // tap: space | shift + tap: dot -> space -> sticky shift
-        spc_morph: space_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp SPACE>, <&dot_spc>;
-        };
-
         // tap: backspace | shift-tap: del | hold: media layer
         bspc_del_layer: bspc_del_layer {
             compatible = "zmk,behavior-mod-morph";
@@ -132,14 +113,6 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GT>;
         };
-        dot_spc: dot_space {
-            // type ". <sticky shift>" for starting new sentences
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <5>;
-            bindings = <&kp KP_DOT &kp SPACE &sk LSHFT>;
-        };
     };
 
     keymap {
@@ -151,7 +124,7 @@
              * Tab where it normally is
              * Standard caps lock mapped to Esc
              * Enter mapped to left inner thumb. Also works as a layer toggle TODO
-             * Space on right inner thumb. Hold to switch to NAV layer. Shift+Space inserts ". " with sticky shift
+             * Space on right inner thumb. Hold to switch to NAV layer
              * Backspace and delete on right middle thumb. Hold shift to trigger delete.
              */
             display-name = "Base";
@@ -163,7 +136,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
             &sl 1              &sticky_layer_tap 4 Z           &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                  &kp RET
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
-                                                                                       &kp LGUI                  &mo 1                &lt NUM ENTER                 &lt_spc NAV 0           &bspc_del_layer         &lt 3 BACKSPACE
+                                                                                       &kp LGUI                  &mo 1                   &lt NUM ENTER               &lt NAV SPACE           &bspc_del_layer         &lt 3 BACKSPACE
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
             >;
         };
