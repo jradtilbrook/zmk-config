@@ -41,6 +41,16 @@
 #define ___ &trans
 #define HYPER LS(LC(LG(LALT)))
 
+/*
+ * Sticky Key Settings
+ */
+&sk {
+    // Deactivate shift on press of next key instead of on release
+    // to prevent capitalization of multiple characters when rolling
+    // keys (such as `ST`).
+    quick-release;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
