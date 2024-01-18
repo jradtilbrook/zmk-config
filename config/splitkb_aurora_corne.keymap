@@ -39,6 +39,7 @@
 // shortcuts
 #define XXX &none
 #define ___ &trans
+#define HYPER LGUI(LSHIFT(LCTRL(LALT)))
 
 / {
     combos {
@@ -144,12 +145,20 @@
         compatible = "zmk,keymap";
 
         base_layer {
+            /*
+             * QWERTY layer with home-row mods
+             * Tab where it normally is
+             * Standard caps lock mapped to Esc
+             * Enter mapped to left inner thumb. Also works as a layer toggle TODO
+             * Space on right inner thumb. Hold to switch to NAV layer. Shift+Space inserts ". " with sticky shift
+             * Backspace and delete on right middle thumb. Hold shift to trigger delete.
+             */
             display-name = "Base";
             bindings = <
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
             &kp TAB                   &kp Q                    &kp W                    &kp E                    &kp R                     &kp T                         &kp Y                   &kp U                    &kp I                     &kp O                  &kp P                    &kp BSPC
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-            &kp ESC                &hrm_l LGUI A           &hrm_l LALT S           &hrm_l LSHIFT D           &hrm_l LCTRL F                &kp G                         &kp H               &hrm_r RCTRL J            &hrm_r RSHIFT K          &hrm_r RALT L           &hrm_r RGUI SEMI            &kp SQT
+            &kp ESC                &hrm_l LGUI A           &hrm_l LALT S           &hrm_l LSHIFT D           &hrm_l LCTRL F            &hrm_l HYPER G               &hrm_r HYPER H            &hrm_r RCTRL J            &hrm_r RSHIFT K          &hrm_r RALT L           &hrm_r RGUI SEMI            &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
             &sl 1              &sticky_layer_tap 4 Z           &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                  &kp RET
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
