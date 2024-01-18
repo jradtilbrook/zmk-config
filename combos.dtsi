@@ -1,0 +1,62 @@
+#define COMBO_TERM_FAST 35
+#define COMBO_TERM_SLOW 45
+#define COMBO_PRIOR_IDLE 150
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_paren_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <15 16>; // D+F
+            layers = <BASE NUM>;
+            bindings = <&kp LPAR>;
+        };
+        combo_paren_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <19 20>; // J+K
+            layers = <BASE NUM>;
+            bindings = <&kp RPAR>;
+        };
+
+        combo_brace_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <27 28>; // C+V
+            layers = <BASE NUM>;
+            bindings = <&kp LBRC>;
+        };
+        combo_brace_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <31 32>; // M+,
+            layers = <BASE NUM>;
+            bindings = <&kp RBRC>;
+        };
+
+        combo_bracket_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <3 4>; // E+R
+            layers = <BASE NUM>;
+            bindings = <&kp LBKT>;
+        };
+        combo_bracket_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <7 8>; // U+I
+            layers = <BASE NUM>;
+            bindings = <&kp RBKT>;
+        };
+
+        combo_caps_word {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <15 20>; // D+K
+            layers = <BASE NUM>;
+            bindings = <&caps_word>;
+        };
+    };
+};
