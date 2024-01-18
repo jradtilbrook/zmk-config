@@ -58,5 +58,7 @@
             layers = <BASE NUM>;
             bindings = <&caps_word>;
         };
+
+        // TODO: backspace/delete like urob? (keys 8+9 or 20+21) and do away with bspc_del_layer mod morph that seems to insert a ~
     };
 };
