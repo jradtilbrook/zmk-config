@@ -103,6 +103,7 @@
             #binding-cells = <0>;
             bindings = <&lt MEDIA BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <0>;
         };
     };
 
