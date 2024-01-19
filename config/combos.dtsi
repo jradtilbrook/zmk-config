@@ -62,6 +62,12 @@
             bindings = <&caps_word>;
         };
 
-        // TODO: backspace/delete like urob? (keys 8+9 or 20+21) and do away with bspc_del_layer mod morph that seems to insert a ~
+        combo_bspc_del {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <6 7>; // Y+U
+            layers = <BASE NUM>;
+            bindings = <&bspc_del>;
+        };
     };
 };
