@@ -41,18 +41,9 @@
 #define ___ &trans
 #define HYPER LS(LC(LG(LALT)))
 
+#include "combos.dtsi"
+
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_caps_word {
-            key-positions = <15 20>;
-            bindings = <&caps_word>;
-
-            // bindings = <&kt LSHIFT>; // is this basically just caps lock?
-        };
-    };
-
     behaviors {
         sticky_layer_tap: sticky_layer_tap {
             compatible = "zmk,behavior-hold-tap";
