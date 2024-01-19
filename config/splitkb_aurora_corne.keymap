@@ -41,6 +41,7 @@
 #define ___ &trans
 #define HYPER LS(LC(LG(LALT)))
 
+#include "settings.dtsi"
 #include "combos.dtsi"
 
 / {
