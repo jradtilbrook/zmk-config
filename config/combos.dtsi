@@ -10,14 +10,14 @@
         // 1. It interfers with mashing the home row to trigger "hyper" (or even just ctrl+shift).
         //    However, I have hyper bound to the inner home row to use instead.
         combo_paren_l {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <15 16>; // D+F
             layers = <BASE NUM>;
             bindings = <&kp LPAR>;
         };
         combo_paren_r {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <19 20>; // J+K
             layers = <BASE NUM>;
@@ -25,14 +25,14 @@
         };
 
         combo_brace_l {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <27 28>; // C+V
             layers = <BASE NUM>;
             bindings = <&kp LBRC>;
         };
         combo_brace_r {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <31 32>; // M+,
             layers = <BASE NUM>;
@@ -40,14 +40,14 @@
         };
 
         combo_bracket_l {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <3 4>; // E+R
             layers = <BASE NUM>;
             bindings = <&kp LBKT>;
         };
         combo_bracket_r {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <7 8>; // U+I
             layers = <BASE NUM>;
@@ -63,7 +63,7 @@
         };
 
         combo_bspc_del {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <6 7>; // Y+U
             layers = <BASE NUM>;
