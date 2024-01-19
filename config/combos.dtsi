@@ -6,6 +6,9 @@
     combos {
         compatible = "zmk,combos";
 
+        // Caveats of the parenthesis combos:
+        // 1. It interfers with mashing the home row to trigger "hyper" (or even just ctrl+shift).
+        //    However, I have hyper bound to the inner home row to use instead.
         combo_paren_l {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
