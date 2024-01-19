@@ -16,7 +16,7 @@
 #define BASE 0
 #define NUM 1
 #define NAV 2
-#define MEDIA 3
+#define ADJUST 3
 
 // home-row mod timing config
 #define HRM_TAPPING_TERM 300
@@ -88,11 +88,11 @@
             mods = <(MOD_LSFT)>;
         };
 
-        // tap: backspace | shift-tap: del | hold: media layer
+        // tap: backspace | shift-tap: del | hold: adjust layer
         bspc_del_layer: bspc_del_layer {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt MEDIA BSPC>, <&kp DEL>;
+            bindings = <&lt ADJUST BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -155,20 +155,20 @@
         };
 
         /**
-         * Media layer is accessed from right thumb. So most keys are on the left half to minimise hand stretching.
-         * Inner left thumb toggles on the media layer to keep it active if wanting to hit prev/next a few times, etc.
+         * Adjust layer is accessed from right thumb. So most keys are on the left half to minimise hand stretching.
+         * Inner left thumb toggles on the adjust layer to keep it active if wanting to hit prev/next a few times, etc.
          */
-        media_layer {
-            display-name = "Media";
+        adjust_layer {
+            display-name = "Adjust";
             bindings = <
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
-              XXX                       XXX                      XXX                      XXX                  &kp C_VOL_UP                 XXX                           XXX                      XXX                      XXX                      XXX                     XXX                      XXX
+              XXX                       XXX                      XXX                 &kp C_BRI_INC             &kp C_VOL_UP                 XXX                           XXX                      XXX                      XXX                      XXX                     XXX                      XXX
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-              XXX                       XXX                      XXX                      XXX                  &kp C_VOL_DN                 XXX                        &kp C_PREV                 &kp C_NEXT                XXX                      XXX                     XXX                      XXX
+              XXX                       XXX                      XXX                 &kp C_BRI_DEC             &kp C_VOL_DN                 XXX                        &kp C_PREV                 &kp C_NEXT                XXX                      XXX                     XXX                      XXX
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
               XXX                       XXX                      XXX                      XXX                      XXX                      XXX                           XXX                      XXX                      XXX                      XXX                     XXX                      XXX
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
-                                                                                       &tog MEDIA               &kp K_MUTE            &kp C_PLAY_PAUSE                    XXX                      XXX                      XXX
+                                                                                       &tog ADJUST               &kp K_MUTE            &kp C_PLAY_PAUSE                    XXX                      XXX                      XXX
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
             >;
         };
