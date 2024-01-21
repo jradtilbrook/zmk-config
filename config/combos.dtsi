@@ -12,14 +12,14 @@
         combo_paren_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <15 16>; // D+F
+            key-positions = <16 17>; // F+G
             layers = <BASE NUM>;
             bindings = <&kp LPAR>;
         };
         combo_paren_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <19 20>; // J+K
+            key-positions = <18 19>; // H+J
             layers = <BASE NUM>;
             bindings = <&kp RPAR>;
         };
@@ -27,14 +27,14 @@
         combo_brace_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <27 28>; // C+V
+            key-positions = <28 29>; // V+B
             layers = <BASE NUM>;
             bindings = <&kp LBRC>;
         };
         combo_brace_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <31 32>; // M+,
+            key-positions = <30 31>; // N+M
             layers = <BASE NUM>;
             bindings = <&kp RBRC>;
         };
@@ -42,14 +42,14 @@
         combo_bracket_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <3 4>; // E+R
+            key-positions = <4 5>; // R+T
             layers = <BASE NUM>;
             bindings = <&kp LBKT>;
         };
         combo_bracket_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <7 8>; // U+I
+            key-positions = <6 7>; // Y+U
             layers = <BASE NUM>;
             bindings = <&kp RBKT>;
         };
@@ -60,14 +60,6 @@
             key-positions = <15 20>; // D+K
             layers = <BASE NUM>;
             bindings = <&caps_word>;
-        };
-
-        combo_bspc_del {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <6 7>; // Y+U
-            layers = <BASE NUM>;
-            bindings = <&bspc_del>;
         };
     };
 };
