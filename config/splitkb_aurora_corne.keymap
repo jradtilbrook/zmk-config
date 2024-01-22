@@ -22,7 +22,7 @@
 #define HRM_TAPPING_TERM 300
 #define HRM_TAPPING_TERM_FAST 200
 #define HRM_QUICK_TAP 175
-#define HRM_PRIOR_IDLE 150
+#define HRM_PRIOR_IDLE 120
 
 /* key positions
 ╭────────────────────────┬────────────────────────╮
