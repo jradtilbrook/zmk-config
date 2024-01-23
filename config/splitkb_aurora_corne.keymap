@@ -17,6 +17,7 @@
 #define NUM 1
 #define NAV 2
 #define ADJUST 3
+#define VIM 4
 
 // home-row mod timing config
 #define HRM_TAPPING_TERM 300
@@ -46,15 +47,6 @@
 
 / {
     behaviors {
-        sticky_layer_tap: sticky_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "STICKY_LAYER_TAP";
-            bindings = <&sl>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         hrm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -117,9 +109,9 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
             &kp ESC                &hrm_l LGUI A           &hrm_l LALT S           &hrm_l LSHIFT D           &hrm_l LCTRL F            &hrm_l HYPER G               &hrm_r HYPER H             &hrm_r RCTRL J         &hrm_r RSHIFT K          &hrm_r RALT L           &hrm_r RGUI SEMI             &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-            &sl NUM           &sticky_layer_tap 4 Z           &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                  &kp RET
+            &mo NAV                  &lt VIM Z                 &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                  &kp RET
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
-                                                                                       &kp LGUI                 &mo NUM                &mt F20 ENTER                    &kp SPACE             &bspc_del_layer          &lt 3 BACKSPACE
+                                                                                       &kp LGUI                 &mo NUM                &mt F20 ENTER                   &kp SPACE             &bspc_del_layer          &lt 3 BACKSPACE
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
             >;
         };
