@@ -69,13 +69,5 @@
             layers = <BASE>;
             bindings = <&kp COLON>;
         };
-
-        combo_tmux_prefix {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <3 4>; // E+R
-            layers = <BASE>;
-            bindings = <&kp LC(B)>;
-        };
     };
 };
