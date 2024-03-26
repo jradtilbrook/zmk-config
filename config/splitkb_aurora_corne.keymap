@@ -76,17 +76,6 @@
             hold-trigger-on-release;
         };
 
-        thumb_mod: thumb_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "tap-preferred";
-            tapping-term-ms = 200;
-            quick-tap-ms = 250;
-            require-prior-idle-ms = 150;
-        };
-
         /**
         * Temporarily switches to a layer (`&mo`) while a modifier is held.
         * Analogous to QMK's `LM()`, using a parameterized macro.
@@ -159,7 +148,7 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
             &mo NAV                  &lt VIM Z                 &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                 &sk LSHIFT
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
-                                                                                       &kp LGUI                 &num_td          &thumb_mod RAYCAST ENTER   &thumb_mod HAMMERSPOON SPACE     &bspc_del_layer              &mo NAV
+                                                                                       &kp LGUI                 &num_td            &hrm_l RAYCAST ENTER        &hrm_r HAMMERSPOON SPACE      &bspc_del_layer              &mo NAV
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
             >;
         };
