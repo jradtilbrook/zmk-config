@@ -43,7 +43,7 @@
 #define ___ &trans
 #define HYPER LS(LC(LG(LALT)))
 #define RAYCAST F20
-#define HAMMERSPOON F21
+#define HAMMERSPOON F19
 
 #include "settings.dtsi"
 #include "combos.dtsi"
