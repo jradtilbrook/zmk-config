@@ -59,6 +59,14 @@ nice_view_spi: &spi0 {
 #include "combos.dtsi"
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <ADJUST>;
+        };
+    };
+
     behaviors {
         hrm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
