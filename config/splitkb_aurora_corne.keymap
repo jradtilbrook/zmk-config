@@ -150,7 +150,7 @@ nice_view_spi: &spi0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp_kt LSHIFT CAPSLOCK>, <&kp LCTRL>; // TODO: change LCTRL to something else, maybe a layer, maybe enter, maybe lgui
+            bindings = <&kp_kt LSHIFT LSHIFT>, <&kp LCTRL>; // TODO: change LCTRL to something else, maybe a layer, maybe enter, maybe lgui
         };
 
         // tap: backspace | shift-tap: del
