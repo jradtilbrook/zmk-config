@@ -94,6 +94,12 @@ nice_view_spi: &spi0 {
             hold-trigger-on-release;
         };
 
+        kp_kt: kp_kt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kt>;
+        };
+
         /**
         * Temporarily switches to a layer (`&mo`) while a modifier is held.
         * Analogous to QMK's `LM()`, using a parameterized macro.
@@ -142,7 +148,7 @@ nice_view_spi: &spi0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>; // TODO: change LCTRL to something else, maybe a layer, maybe enter, maybe lgui
+            bindings = <&kp_kt LSHIFT CAPSLOCK>, <&kp LCTRL>; // TODO: change LCTRL to something else, maybe a layer, maybe enter, maybe lgui
         };
 
         // tap: backspace | shift-tap: del
