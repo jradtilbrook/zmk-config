@@ -69,5 +69,50 @@
             layers = <BASE>;
             bindings = <&kp COLON>;
         };
+
+        combo_copy {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <27 28>; // C+V
+            layers = <BASE>;
+            bindings = <&kp LG(C)>;
+        };
+        combo_paste {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <28 29>; // V+B
+            layers = <BASE>;
+            bindings = <&kp LG(V)>;
+        };
+        combo_cut {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <26 27>; // X+C
+            layers = <BASE>;
+            bindings = <&kp LG(X)>;
+        };
+        combo_undo {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <25 26>; // Z+X
+            layers = <BASE>;
+            bindings = <&kp LG(Z)>;
+        };
+
+        combo_raycast {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <31 32>; // M+<
+            layers = <BASE>;
+            bindings = <&kp F20>;
+        };
+        combo_hammerspoon {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <32 33>; // <+>
+            layers = <BASE>;
+            bindings = <&kp F19>;
+        };
     };
 };
+// vi: ft=dts textwidth=0 noautoindent
