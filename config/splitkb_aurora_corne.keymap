@@ -129,6 +129,7 @@ nice_view_spi: &spi0 {
             bindings = <&sl NUM>, <&sticky_lm NUM LSHIFT>;
         };
 
+        // tap: backspace | shift-tap: del
         bspc_del: bspc_del {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -160,11 +161,11 @@ nice_view_spi: &spi0 {
             display-name = "Base";
             bindings = <
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
-            &kp TAB                   &kp Q                    &kp W                    &kp E                    &kp R                  &rgb_ug RGB_EFF                         &kp Y                   &kp U                    &kp I                    &kp O                  &kp P                    &kp BSLH
+            &kp TAB                   &kp Q                    &kp W                    &kp E                    &kp R                     &kp T                         &kp Y                   &kp U                    &kp I                    &kp O                  &kp P                    &bspc_del
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-            &kp ESC                &hrm_l LGUI A           &hrm_l LALT S           &hrm_l LSHIFT D           &hrm_l LCTRL F            &rgb_ug RGB_TOG              &hrm_r HYPER H             &hrm_r RCTRL J         &hrm_r RSHIFT K          &hrm_r RALT L           &hrm_r RGUI SEMI             &kp SQT
+            &kp ESC                &hrm_l LGUI A           &hrm_l LALT S           &hrm_l LSHIFT D           &hrm_l LCTRL F            &hrm_l HYPER G               &hrm_r HYPER H             &hrm_r RCTRL J         &hrm_r RSHIFT K          &hrm_r RALT L           &hrm_r RGUI SEMI             &kp SQT
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-            &mo NAV                  &lt VIM Z                 &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                 &sk LSHIFT
+            &mo NAV                  &lt VIM Z                 &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                 &kp ENTER
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
                                                                                        &kp LGUI                 &num_td             &hrm_l LSHIFT ENTER        &hrm_r HAMMERSPOON SPACE      &bspc_del_layer              &mo NAV
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
@@ -237,4 +238,4 @@ nice_view_spi: &spi0 {
     };
 };
 
-// vi: ft=dts textwidth=0
+// vi: ft=dts textwidth=0 noautoindent
