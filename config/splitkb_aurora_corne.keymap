@@ -152,7 +152,15 @@ nice_view_spi: &spi0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&&rgb_ug RGB_BRI>, <&&rgb_ug RGB_BRD>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
+
+        // underglow brightness dance
+        rgb_hue_td: rgb_hue_td {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
         };
 
         // tap: capslock, hold: shift, tap-hold:control
@@ -271,7 +279,7 @@ nice_view_spi: &spi0 {
             display-name = "Adjust";
             bindings = <
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
-           &bt BT_CLR               &bt BT_NXT                   XXX                 &kp C_BRI_INC             &kp C_VOL_UP                 XXX                     &rgb_ug RGB_TOG            &rgb_bri_td                  XXX                      XXX                     XXX                      XXX
+           &bt BT_CLR               &bt BT_NXT                   XXX                 &kp C_BRI_INC             &kp C_VOL_UP                 XXX                     &rgb_ug RGB_TOG            &rgb_bri_td              &rgb_hue_td                  XXX                     XXX                      XXX
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
               XXX                   &bt BT_PRV                   XXX                 &kp C_BRI_DEC             &kp C_VOL_DN                 XXX                     &rgb_ug RGB_EFF        &play_next_prev_td               XXX                      XXX                     XXX                      XXX
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
