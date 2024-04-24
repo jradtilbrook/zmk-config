@@ -73,28 +73,28 @@
         combo_copy {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <27 28>; // C+V
+            key-positions = <15 27>; // D+C
             layers = <BASE>;
             bindings = <&kp LG(C)>;
         };
         combo_paste {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <28 29>; // V+B
+            key-positions = <16 28>; // F+V
             layers = <BASE>;
             bindings = <&kp LG(V)>;
         };
         combo_cut {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <26 27>; // X+C
+            key-positions = <14 26>; // S+X
             layers = <BASE>;
             bindings = <&kp LG(X)>;
         };
         combo_undo {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <25 26>; // Z+X
+            key-positions = <13 25>; // A+Z
             layers = <BASE>;
             bindings = <&kp LG(Z)>;
         };
