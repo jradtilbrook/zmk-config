@@ -113,6 +113,21 @@
             layers = <BASE>;
             bindings = <&kp F19>;
         };
+
+        combo_next {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <19 20>; // J+K
+            layers = <ADJUST>;
+            bindings = <&kp C_NEXT>;
+        };
+        combo_prev {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <18 19>; // H+J
+            layers = <ADJUST>;
+            bindings = <&kp C_PREV>;
+        };
     };
 };
 // vi: ft=dts textwidth=0 noautoindent
