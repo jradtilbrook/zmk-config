@@ -53,7 +53,7 @@ nice_view_spi: &spi0 {
 #define XXX &none
 #define ___ &trans
 #define HYPER LS(LC(LG(LALT)))
-#define WINDOW(k) LC(LALT(k))
+#define WINDOW(k) LC(LA(k))
 #define RAYCAST F20
 #define HAMMERSPOON F19
 
