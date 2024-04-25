@@ -110,6 +110,14 @@ nice_view_spi: &spi0 {
             hold-trigger-key-positions = <KEYS_VIM>;
         };
 
+        mo_sl: behavior_mo_sl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&mo>, <&sl>;
+        };
+
         kp_kt: kp_kt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -177,7 +185,7 @@ nice_view_spi: &spi0 {
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
             &mo NAV                &vim_lt VIM Z               &kp X                    &kp C                    &kp V                     &kp B                         &kp N                   &kp M                   &kp COMMA                 &kp DOT                &kp FSLH                 &kp ENTER
 // ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┴────────────────────────┴────────────────────────╯
-                                                                                       &kp LGUI                 &mo LOWER             &mt LSHIFT CAPSLOCK              &kp SPACE                &mo RAISE              &mo NAV
+                                                                                       &kp LGUI            &mo_sl LOWER LOWER      &mt LSHIFT CAPSLOCK                &kp SPACE            &mo_sl RAISE RAISE            &mo NAV
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
                 // TODO: customise vim layer tap with custom logic similar to hrm so that it works straight away when hitting the vim nav keys
             >;
