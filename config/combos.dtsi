@@ -128,6 +128,56 @@
             layers = <ADJUST>;
             bindings = <&kp C_PREV>;
         };
+
+        combo_window_maximise {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <30 31>; // N+M
+            layers = <LOWER>;
+            bindings = <&kp LC(LA(ENTER))>;
+        };
+        combo_window_center {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <31 32>; // M+<
+            layers = <LOWER>;
+            bindings = <&kp LC(LA(C))>;
+        };
+        combo_window_restore {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <32 33>; // <+>
+            layers = <LOWER>;
+            bindings = <&kp LC(LA(BSPC))>;
+        };
+        combo_window_left {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <18 19>; // H+J
+            layers = <LOWER>;
+            bindings = <&kp LG(LC(LA(LEFT)))>;
+        };
+        combo_window_right {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <19 20>; // J+K
+            layers = <LOWER>;
+            bindings = <&kp LG(LC(LA(RIGHT)))>;
+        };
+        combo_window_larger {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <18 30>; // H+N
+            layers = <LOWER>;
+            bindings = <&kp LC(LA(EQUAL))>;
+        };
+        combo_window_smaller {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <19 31>; // J+M
+            layers = <LOWER>;
+            bindings = <&kp LC(LA(MINUS))>;
+        };
     };
 };
 // vi: ft=dts textwidth=0 noautoindent
