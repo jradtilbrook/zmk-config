@@ -41,6 +41,23 @@
             bindings = <&kp C_PLAY_PAUSE>, <&kp K_MUTE>;
             mods = <(MOD_LSFT)>;
         };
+        vol_up_next: vol_up_next {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_NEXT>;
+            mods = <(MOD_LSFT)>;
+        };
+        vol_down_prev: vol_down_prev {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_PREV>;
+            mods = <(MOD_LSFT)>;
+        };
+        encoder_vol: encoder_vol {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&vol_up_next>, <&vol_down_prev>;
+        };
     };
 
     keymap {
@@ -62,7 +79,7 @@
                  &kp LCTRL &kp LALT &kp LGUI &mo LOWER  &kp LSHFT  &kp SPACE  &mo RAISE  &kp RGUI &kp RALT  &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&encoder_vol &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
