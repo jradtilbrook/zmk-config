@@ -1,0 +1,7 @@
+/*
+ * Modify the CS pin to D0
+ */
+nice_view_spi: &spi0 {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
+// vi: ft=dts textwidth=0 noautoindent
