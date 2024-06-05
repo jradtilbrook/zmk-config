@@ -1,0 +1,15 @@
+/*
+ * Override the encoder settings for Panasonic EVQWGD001
+ */
+/ {
+    left_encoder: encoder_left {
+        steps = <15>;
+    };
+    right_encoder: encoder_right {
+        steps = <15>;
+    };
+    &sensors {
+        triggers-per-rotation = <15>;
+    };
+};
+// vi: ft=dts textwidth=0 noautoindent
