@@ -62,6 +62,16 @@ nice_view_spi: &spi0 {
             #sensor-binding-cells = <0>;
             bindings = <&vol_down_prev>, <&vol_up_next>;
         };
+
+        left_encoder: encoder_left {
+            steps = <15>;
+        };
+        right_encoder: encoder_right {
+            steps = <15>;
+        };
+        &sensors {
+            triggers-per-rotation = <15>;
+        };
     };
 
     keymap {
