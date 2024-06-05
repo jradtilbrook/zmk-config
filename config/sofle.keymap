@@ -55,7 +55,7 @@
         encoder_vol: encoder_vol {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&vol_up_next>, <&vol_down_prev>;
+            bindings = <&vol_down_prev>, <&vol_up_next>;
         };
     };
 
