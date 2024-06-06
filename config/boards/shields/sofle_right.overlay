@@ -1,0 +1,9 @@
+/*
+ * Encoders must be enabled separately per side
+ */
+/ {
+    &right_encoder {
+        status = "okay";
+    };
+};
+// vi: ft=dts textwidth=0 noautoindent
