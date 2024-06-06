@@ -112,16 +112,16 @@
 
             // ------------------------------------------------------------------------------------------------------------
             // |       |      |      |       |       |      |                |      |      |       |      |       |       |
-            // |       |      |      |       | EMOJI |      |                |      |      |       |      |       |       |
+            // |       |      |      | EMOJI | EMOJI |      |                |      |      |       |      |       |       |
             // |       | SWTCH|      |       |       | PASS |                |   <- |  v   |   ^   |  ->  |       |       |
-            // |       |      |      |       | CLIPB |      |      |  |      |      |      |       |      |       |       |
+            // |       |      |      | SCSHOT| CLIPB |      |      |  |      | NOTES|      |       |      |       |       |
             //                |      |       |       |      | CAPS |  |      |      |      |       |      |
 
             bindings = <
 &trans  &trans  &trans         &trans  &trans                 &trans                                       &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &trans         &trans  &emoji_react           &trans                                       &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans         &kp LG(LC(SPACE))  &emoji_react           &trans                                       &trans    &trans    &trans  &trans     &trans  &trans
 &trans  &trans  &kp LA(SPACE)  &trans  &trans                 &kp LS(LC(LG(LA(G))))                        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans         &trans  &kp LS(LC(LG(LA(P))))  &trans                 &trans        &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans         &kp LG(LS(N4))  &kp LS(LC(LG(LA(P))))  &trans                 &trans        &trans  &kp LS(LC(LG(LA(N)))) &trans    &trans  &trans     &trans  &trans
                 &trans         &trans  &trans                 &mo 1                  &caps_word    &trans  &tog 2    &trans    &trans  &trans
             >;
 
