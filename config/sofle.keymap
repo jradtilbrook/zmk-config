@@ -103,10 +103,10 @@
             //                |      |       |       |      | CAPS |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans       &trans  &trans  &trans       &trans                      &trans    &trans    &trans    &trans     &trans  &trans
-&trans  &trans       &trans  &trans  &trans       &trans                      &trans    &trans    &trans    &trans     &trans  &trans
-&trans &kp LA(SPACE) &trans  &trans  &trans       &kp HYPR(G)                 &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&trans  &trans       &trans  &trans  &kp HYPR(P)  &trans    &trans    &trans  &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans       &trans  &trans       &trans                      &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans       &trans  &trans       &trans                      &trans    &trans    &trans    &trans     &trans  &trans
+&trans  &trans &kp LA(SPACE) &trans  &trans       &kp HYPR(G)                 &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&trans  &trans  &trans       &trans  &kp HYPR(P)  &trans    &trans    &trans  &trans    &trans    &trans    &trans     &trans  &trans
                      &trans  &trans  &trans       &trans   &caps_word &trans  &trans    &trans    &trans    &trans
             >;
 
