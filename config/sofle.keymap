@@ -43,7 +43,6 @@
 
         inc_dec_bt: inc_dec_bt {
             compatible = "zmk,behavior-sensor-rotate-var";
-            label = "INC_DEC_BT";
             #sensor-binding-cells = <2>;
             bindings = <&bt>, <&bt>;
         };
