@@ -134,7 +134,7 @@
                     &none  &none  &none  &none  &none         &none              &none  &none  &none  &none
             >;
 
-            sensor-bindings = <&inc_dec_bt BT_PRV BT_NXT>;
+            // sensor-bindings = <&inc_dec_bt BT_PRV BT_NXT>;
         };
     };
 };
