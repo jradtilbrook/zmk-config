@@ -22,6 +22,6 @@
     // keys (such as `ST`).
     quick-release;
 
-    // Wait for next key press to register the sticky key. This is for mouse interaction
-    lazy;
+    // Fairly quickly release if no subsequent key pressed.
+    release-after-ms = <400>;
 };
