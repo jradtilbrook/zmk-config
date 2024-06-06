@@ -1,3 +1,5 @@
+#include <behaviors.dtsi>
+
 /*
  * Layer Tap Settings
  */
