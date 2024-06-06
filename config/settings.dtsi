@@ -23,5 +23,5 @@
     quick-release;
 
     // Fairly quickly release if no subsequent key pressed.
-    release-after-ms = <400>;
+    release-after-ms = <300>;
 };
