@@ -21,4 +21,7 @@
     // to prevent capitalization of multiple characters when rolling
     // keys (such as `ST`).
     quick-release;
+
+    // Wait for next key press to register the sticky key. This is for mouse interaction
+    lazy;
 };
