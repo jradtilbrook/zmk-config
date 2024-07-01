@@ -76,6 +76,11 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GT>;
         };
+        go_dec: go_dec {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+        };
 
         emoji_react: emoji_react {
             compatible = "zmk,behavior-macro";
@@ -121,7 +126,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans     &trans     &trans  &trans  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6      &kp N7     &kp N8     &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &php_arrow  &kp MINUS  &kp EQUAL  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &php_arrow  &kp MINUS  &kp EQUAL  &trans  &go_dec &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp UNDER  &kp PLUS   &trans  &trans  &trans
                 &trans  &trans  &trans  &tog 1  &trans    &trans  &mo 2       &trans     &trans     &trans
             >;
