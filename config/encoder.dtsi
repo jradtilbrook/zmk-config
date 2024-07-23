@@ -2,11 +2,11 @@
  * Override the encoder settings for Panasonic EVQWGD001
  */
 &left_encoder {
-    steps = <30>;
+    steps = <15>;
 };
 
 &right_encoder {
-    steps = <30>;
+    steps = <15>;
 };
 
 &sensors {
