@@ -25,6 +25,7 @@
     // Fairly quickly release if no subsequent key pressed.
     release-after-ms = <400>;
 };
+
 &sl {
     release-after-ms = <400>;
 };
