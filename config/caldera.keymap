@@ -56,7 +56,6 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            hold-while-undecided;
         };
     };
 
